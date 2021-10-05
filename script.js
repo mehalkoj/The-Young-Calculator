@@ -15,7 +15,7 @@ function calculate(){
     var myChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ['Housing', 'Wants', 'Savings & Debt'],
+            labels: ['Needs', 'Wants', 'Savings & Debt'],
             datasets: [{
                 label: '',
                 data: [percentages.perfifty, percentages.perthirty, percentages.pertwenty],
@@ -58,13 +58,55 @@ function calculate(){
   document.getElementById("30%").innerHTML = percentages.perthirty;
   document.getElementById("20%").innerHTML = percentages.pertwenty;
 
-
-
-
-
 };
 
+function bulletpost() {
 
+// Create close button and append it to each list item
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on  close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+// Bullet point entry
+    var li = document.createElement("li");
+    var inputValue = document.getElementById("bullet_input").value;
+    var t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    if (inputValue === '') {
+      alert("You must write something!");
+    } else {
+      document.getElementById("ultodo").appendChild(li);
+    }
+    document.getElementById("bullet_input").value = "";
+  
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
+  
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+}
 
 
 

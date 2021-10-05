@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="bootstrap.min.css">
   <script src="script.js"></script>
-  <script src="chart/dist/chart.min.js"></script>
+  <script src="chart.min.js"></script>
 <script src="bootstrap.min.js"></script>
 
 
@@ -34,6 +34,68 @@
   <input class="btn btn-primary" type="button" onclick="calculate()"  value="Enter"></input>
 
   <br>
+
+  <!--- Side Calculator and Budget Tool---->
+
+
+
+<a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+  Side Panel
+</a>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Calculate and Budget</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+<!--- Calculator Portion---->
+      <div id="row-3">
+        <button type="button" class="btn btn-primary" value="7">7</button>
+        <button type="button" class="btn btn-primary" value="8">8</button>
+        <button type="button" class="btn btn-primary" value="9">9</button>
+        </div>
+    <div id="row-2">
+      <button type="button" class="btn btn-primary" value="4">4</button>
+      <button type="button" class="btn btn-primary" value="5">5</button>
+      <button type="button" class="btn btn-primary" value="6">6</button>
+    </div>
+    <div id="row-1">
+      <button type="button" class="btn btn-primary" value="1">1</button>
+      <button type="button" class="btn btn-primary" value="2">2</button>
+      <button type="button" class="btn btn-primary" value="3">3</button>
+    </div>
+    <div id="enter-column">
+      <button type="button" class="btn btn-primary" value="=">Enter</button>
+    </div>
+    <div id="operator-row">
+      <button type="button" class="btn btn-primary" value="/">/</button>
+      <button type="button" class="btn btn-primary" value="*">*</button>
+      <button type="button" class="btn btn-primary" value="+">+</button>
+      <button type="button" class="btn btn-primary" value="-">-</button>
+    </div>
+    </div>
+<!--- Notes/budgetlist---->
+<h3>A Bullet List To Place Your Thoughts</h3>
+
+  <input type="text" id="bullet_input" name="bullet">
+
+<button id="bullets" type="button" class="btn btn-primary" onclick="bulletpost()"  value="bullet">Add Bullet</button>
+
+<ul id="ultodo">
+  
+
+</ul>>
+
+
+    </div>
+ 
+
+
+
+
+
+
 
 
 </body>
