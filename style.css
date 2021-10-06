@@ -8,3 +8,31 @@ height: 600px;
 width: 600px;
 margin-left: 600px;
 }
+
+#stuck-button {
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    width: 70px;
+    height: 60px
+}
+
+#monthlyincome {
+    position: absolute;
+    left: 800px;
+    top: 700px;
+}
+
+label {
+    position: absolute;
+    left: 835px;
+    top: 650px;
+    
+}
+
+#calc-enter {
+    position: absolute;
+    right: 870px;
+    top: 750px;
+    width: 90px
+}
